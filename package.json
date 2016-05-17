@@ -6,14 +6,14 @@
   "scripts": {
     "compile": "babel index.js -d lib",
     "lint": "eslint --cache .",
-    "prepublish": "npm run clean && npm run compile"
+    "prepublish": "npm run compile"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "through": "^2.3.8",
-    "escompress": "*"
+    "escompress": "https://github.com/escompress/escompress"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
