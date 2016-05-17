@@ -1,18 +1,18 @@
 const through = require('through');
-const path = require('path');
 const {transform} = require('escompress');
 
-module.exports = function escompressify(file, opts) {
+module.exports = function escompressify(file, opts={}) {
 
   let buffer = '';
-  const exts = []
-    .concat(opts.ext || [])
-    .concat(opts.x || []);
+  const exts = [].concat(opts.exts || []);
 
+  /*
+   * If opt.exts has been set, ignore all files other than those
+   */
   if (
     /\.json$/.test(file) ||
     exts.length &&
-    exts.indexOf(path.extname(file)) === -1
+    exts.every((ext) => !file.endsWith(ext))
   ) {
     return through();
   }
