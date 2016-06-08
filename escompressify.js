@@ -23,6 +23,10 @@ module.exports = function escompressify(file, opts={}) {
 
     opts = Object.assign({}, opts);
 
+    delete opts.exts;
+    delete opts._flags;
+    delete opts.global;
+
     var min = transform(buffer, opts);
     this.queue(min.code);
     this.queue(null);

@@ -1,4 +1,4 @@
 var hello = 'world';
-if (false) {
+if (hello !== 'world') {
   throw new Error;
 }
