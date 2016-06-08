@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "through": "^2.3.8",
-    "escompress": "https://github.com/escompress/escompress"
+    "escompress": "^0.5.0",
+    "through": "^2.3.8"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
